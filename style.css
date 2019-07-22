@@ -1,0 +1,293 @@
+body {
+  background-color: black;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  color: orangered;
+  font-size: 5rem;
+  margin-top: 3rem;
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
+  color: green;
+  border: 1px solid currentColor;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  margin-top: 3rem;
+}
+
+a:hover {
+  background-color: green;
+}
+
+.time {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  color: #fff;
+  font-size: 5rem;
+}
+
+.ball {
+  animation: random 4s infinite alternate ease-in;
+  background-color: red;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  color: rgb(10, 10, 10);
+  text-align: center;
+  font-size: 5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  transition: all 1s;
+}
+
+.go {
+  transform: rotate(720deg);
+  background-color: green;
+}
+
+.rope {
+  color: #fff;
+  transform: rotate(90deg);
+  margin-top: -2rem;
+}
+
+.ball2 {
+  animation: random2 4s 1s infinite alternate ease-in;
+  background-color: red;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  color: rgb(10, 10, 10);
+  text-align: center;
+  font-size: 5rem;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+}
+
+.ball3 {
+  animation: random 4s 1s infinite alternate ease-in;
+  position: absolute;
+  top: 60%;
+  left: 40%;
+}
+
+.ball4 {
+  animation: random2 4s infinite alternate ease-in;
+  color: rgb(10, 10, 10);
+  text-align: center;
+  font-size: 5rem;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+}
+
+.ball5 {
+  animation: random 4s 1.5s infinite alternate ease-in;
+  position: absolute;
+  top: 50%;
+  left: 90%;
+}
+
+.ball6 {
+  animation: random 4s 2s infinite alternate ease-in;
+  background-color: rgb(255, 0, 234);
+  position: absolute;
+  top: 60%;
+  left: 100%;
+}
+
+.ball6 .rope {
+  opacity: 1;
+}
+
+@keyframes go {
+  0% {
+    background-color: gold;
+  }
+
+  100% {
+    background-color: rgb(4, 245, 153);
+    transform: rotate(360deg);
+  }
+}
+
+.go {
+  animation: go 0.2s infinite;
+  transform: rotate(720deg);
+  background-color: green;
+}
+
+/************** animating the ball*************/
+@keyframes random {
+  0% {
+    transform: translateX(20rem) translateY(15rem);
+  }
+
+  10% {
+    transform: translateX(5rem) rotate(360deg) translateY(20rem);
+  }
+
+  30% {
+    transform: translateX(-20rem) translateY(-15rem) skew(5deg);
+  }
+
+  50% {
+    transform: translateX(-25rem) translateY(15rem);
+  }
+
+  70% {
+    transform: translateX(25rem) rotate(360deg) translateY(0);
+  }
+
+  100% {
+    transform: translateX(25rem) translateY(-20rem);
+  }
+}
+
+@keyframes random2 {
+  0% {
+    transform: translateX(-20rem) translateY(5rem);
+  }
+
+  10% {
+    transform: translateX(5rem) rotate(360deg) translateY(-20rem);
+  }
+
+  30% {
+    transform: translateX(-20rem) translateY(-15rem) skew(5deg);
+  }
+
+  50% {
+    transform: translateX(25rem) translateY(15rem);
+  }
+
+  70% {
+    transform: translateX(25rem) rotate(360deg) translateY(0);
+  }
+
+  100% {
+    transform: translateX(25rem) translateY(-20rem);
+  }
+}
+
+@keyframes good {
+  0% {
+    transform: translateX(1rem);
+  }
+
+  10% {
+    transform: translateX(-1rem);
+  }
+
+  30% {
+    transform: translateX(1rem);
+  }
+
+  50% {
+    transform: translateX(-1.5rem);
+  }
+
+  70% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes info {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes sweet {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-5rem);
+  }
+}
+
+.info {
+  animation: info 5s alternate;
+  text-align: center;
+  opacity: 0;
+}
+
+.good {
+  animation: good 0.5s alternate;
+  animation-iteration-count: infinite;
+  color: rgb(32, 252, 32);
+}
+
+.sweet {
+  animation: sweet 1s;
+  font-size: 5rem;
+  color: green;
+}
+
+span {
+  opacity: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .ball {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  span {
+    opacity: 0;
+  }
+
+  @keyframes random {
+    0% {
+      transform: translateX(10rem) translateY(5rem);
+    }
+
+    10% {
+      transform: translateX(5rem) rotate(360deg) translateY(10rem);
+    }
+
+    30% {
+      transform: translateX(-10rem) translateY(-5rem) skew(5deg);
+    }
+
+    50% {
+      transform: translateX(-10rem) translateY(5rem);
+    }
+
+    70% {
+      transform: translateX(10rem) rotate(360deg) translateY(0);
+    }
+
+    100% {
+      transform: translateX(10rem) translateY(-10rem);
+    }
+  }
+}
